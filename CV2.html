@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Angel Gabriel Sanchez Aguila</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-animate {
+            background-size: 400% 400%;
+            /* Animation duration for the gradient movement */
+            animation: gradient-animation 6s ease infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Styles for SVG icons */
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+        }
+        .skill-item svg {
+            width: 24px; /* Icon size for better visibility */
+            height: 24px;
+            /* Using stroke for outlines and fill for solid parts, if applicable */
+            stroke: currentColor; /* Default stroke color */
+            stroke-width: 1.5; /* Default stroke width */
+            fill: none; /* Default fill to none, fill will be set explicitly for shapes */
+            min-width: 24px; /* Ensures the icon does not compress */
+            box-shadow: 0 0 0 1px black; /* Small black outline/margin around the shape */
+            border-radius: 4px; /* Slightly rounded corners for the outline */
+            padding: 2px; /* Small padding inside the outline */
+            box-sizing: content-box; /* Ensures padding adds to total size */
+        }
+        /* Specific styles for text logos within SVG */
+        .skill-item .text-logo {
+            font-family: 'Inter', sans-serif; /* Ensures text within SVG uses the same font */
+            font-weight: bold;
+            font-size: 14px; /* Adjust font size within SVG */
+            text-anchor: middle;
+            dominant-baseline: central;
+            fill: currentColor; /* Ensures text color matches parent */
+            stroke: none; /* No stroke for text */
+        }
+        /* Specific fill colors for some logos */
+        .python-logo path { fill: currentColor; stroke: none; }
+        .java-logo path { fill: currentColor; stroke: none; }
+        .react-logo circle, .react-logo path, .react-logo line, .react-logo ellipse { fill: none; stroke: currentColor; }
+        .c-sharp-logo text, .c-logo text, .cpp-logo text, .php-logo text, .js-logo text, .ts-logo text { fill: currentColor; stroke: none; }
+        .c-sharp-logo rect, .c-logo rect, .cpp-logo rect, .php-logo rect, .js-logo rect, .ts-logo rect { fill: none; stroke: currentColor; }
+
+        /* Custom CSS to change list item bullet color to black */
+        ul.list-disc li::marker {
+            color: black;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 to-pink-500 bg-gradient-animate text-white p-8">
+    <div class="max-w-3xl mx-auto bg-white/20 backdrop-blur-md rounded-xl shadow-lg p-8">
+        <header class="text-center mb-6">
+            <img src="https://placehold.co/120x120/8A2BE2/FFFFFF?text=LOGO" alt="Logo de Perfil" class="rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+            <h1 class="text-3xl font-bold text-black">Angel Gabriel Sanchez Aguila</h1>
+            <p class="text-lg text-gray-200">Tecnologías de la Información e Innovación Digital</p>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Información de Contacto</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li><span class="text-gray-600">Email:</span> <a href="mailto:sanchez.angel.20.23@gmail.com" class="text-blue-300 hover:underline">sanchez.angel.20.23@gmail.com</a></li>
+                <li><span class="text-gray-600">Teléfono:</span> <a href="tel:+522412153347" class="text-blue-300 hover:underline">+522412153347</a></li>
+                <li><span class="text-gray-600">LinkedIn:</span> <a href="https://linkedin.com/in/Gabriel Sanchez" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">linkedin.com/in/Gabriel Sanchez</a></li>
+                <li><span class="text-gray-600">GitHub:</span> <a href="https://github.com/Phr34k-7" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">github.com/Phr34k-7</a></li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Sobre mi</h2>
+            <p class="text-gray-200 leading-relaxed">
+                Estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital altamente
+                motivado y con experiencia en la creación de aplicaciones web innovadoras.
+                Apasionado por aprender nuevas tecnologías y resolver problemas complejos.
+            </p>
+        </section>
+        <!--
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Experiencia Laboral</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Desarrollador de Software Senior</h3>
+                    <p class="text-gray-600 text-sm">Empresa XYZ - 2018 - Presente</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-200">
+                        <li>Desarrollé y mantuve aplicaciones web utilizando Python y JavaScript.</li>
+                        <li>Colaboré con equipos multifuncionales para diseñar e implementar nuevas características.</li>
+                        <li>Optimicé el rendimiento de la aplicación y mejoré la experiencia del usuario.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Desarrollador de Software Junior</h3>
+                    <p class="text-gray-600 text-sm">Empresa ABC - 2016 - 2018</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-200">
+                        <li>Asistí en el desarrollo de aplicaciones web.</li>
+                        <li>Escribí y mantuve código para varios proyectos.</li>
+                        <li>Participé en revisiones de código y pruebas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Educación</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-black">T.S.U En Infraestructura De Redes Digitales</h3>
+                    <p class="text-gray-600 text-sm">Universidad Tecnológica De Tlaxcala - 2024 - 2026</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Ingeniería en Tecnologías de la Información e Innovación Digital</h3>
+                    <p class="text-gray-600 text-sm">Universidad de Ejemplo - 2026 - 2027</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Habilidades</h2>
+            <ul class="list-disc list-inside space-y-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-gray-200">
+                <li class="skill-item">
+                    <svg class="python-logo" viewBox="0 0 24 24">
+                        <path d="M12 2c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1h-4Z"></path>
+                        <path d="M2 8h18a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2Z"></path>
+                        <path d="M10 16v4c0 1.1.9 2 2 2h0c1.1 0 2-.9 2-2v-4"></path>
+                        <path d="M7 6c.5 0 .9-.4 1-.9.2-.5.5-1.1.9-1.6.4-.5.9-1.1 1.4-1.6"></path>
+                        <path d="M17 6c-.5 0-.9-.4-1-.9-.2-.5-.5-1.1-.9-1.6-.4-.5-.9-1.1-1.4-1.6"></path>
+                    </svg>
+                    Python
+                </li>
+                <li class="skill-item">
+                    <svg class="java-logo" viewBox="0 0 24 24">
+                        <path d="M10 2c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1h-4Z"></path>
+                        <path d="M2 8h18a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2Z"></path>
+                        <path d="M10 16v4c0 1.1.9 2 2 2h0c1.1 0 2-.9 2-2v-4"></path>
+                        <path d="M7 6c.5 0 .9-.4 1-.9.2-.5.5-1.1.9-1.6.4-.5.9-1.1 1.4-1.6"></path>
+                        <path d="M17 6c-.5 0-.9-.4-1-.9-.2-.5-.5-1.1-.9-1.6-.4-.5-.9-1.1-1.4-1.6"></path>
+                    </svg>
+                    Java
+                </li>
+                <li class="skill-item">
+                    <svg class="js-logo" viewBox="0 0 24 24">
+                        <path d="M12 2L3 6v12l9 4 9-4V6L12 2zM12 4.3L19.5 7.5 12 10.7 4.5 7.5 12 4.3zM4.5 9v8.5l7.5 3.25 7.5-3.25V9l-7.5 3.25L4.5 9z" fill="currentColor"/>
+                        <text x="12" y="12.5" class="text-logo" fill="white" font-size="8px">JS</text>
+                    </svg>
+                    JavaScript
+                </li>
+                <li class="skill-item">
+                    <svg class="ts-logo" viewBox="0 0 24 24">
+                        <path d="M12 2L3 6v12l9 4 9-4V6L12 2zM12 4.3L19.5 7.5 12 10.7 4.5 7.5 12 4.3zM4.5 9v8.5l7.5 3.25 7.5-3.25V9l-7.5 3.25L4.5 9z" fill="currentColor"/>
+                        <text x="12" y="12.5" class="text-logo" fill="white" font-size="8px">TS</text>
+                    </svg>
+                    TypeScript
+                </li>
+                <li class="skill-item">
+                    <svg class="c-sharp-logo" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <text x="12" y="12" class="text-logo" fill="currentColor">C#</text>
+                    </svg>
+                    C#
+                </li>
+                <li class="skill-item">
+                    <svg class="c-logo" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <text x="12" y="12" class="text-logo" fill="currentColor">C</text>
+                    </svg>
+                    C
+                </li>
+                <li class="skill-item">
+                    <svg class="cpp-logo" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <text x="12" y="12" class="text-logo" fill="currentColor">C++</text>
+                    </svg>
+                    C++
+                </li>
+                <li class="skill-item">
+                    <svg class="react-logo" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="2.5"></circle>
+                        <ellipse cx="12" cy="12" rx="10" ry="4"></ellipse>
+                        <ellipse cx="12" cy="12" rx="4" ry="10"></ellipse>
+                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                        <line x1="3.68" y1="8.32" x2="20.32" y2="15.68"></line>
+                        <line x1="3.68" y1="15.68" x2="20.32" y2="8.32"></line>
+                    </svg>
+                    React
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                    Lua
+                </li>
+                <li class="skill-item">
+                    <svg class="php-logo" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <text x="12" y="12" class="text-logo" fill="currentColor">PHP</text>
+                    </svg>
+                    PHP
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem">
+                        <path d="M6 3h12l4 6-10 13L2 9Z"></path>
+                        <path d="m2 9 4 6 12 0 4-6"></path>
+                        <path d="M12 22 4 9 2 9"></path>
+                        <path d="M12 22 20 9 22 9"></path>
+                        <path d="M12 22 12 9"></path>
+                    </svg>
+                    Ruby
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brackets">
+                        <path d="M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"></path>
+                        <path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3"></path>
+                    </svg>
+                    HTML y CSS
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                        <path d="M3 12V19A9 3 0 0 0 21 19V12"></path>
+                    </svg>
+                    Bases de Datos SQL
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch">
+                        <line x1="6" x2="6" y1="3" y2="15"></line>
+                        <path d="M18 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                        <path d="M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                        <path d="M18 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                        <path d="M8.59 16.31A12 12 0 0 0 18 13V6"></path>
+                    </svg>
+                    Git
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plug">
+                        <path d="M12 22v-5"></path>
+                        <path d="M9 18v-3"></path>
+                        <path d="M15 18v-3"></path>
+                        <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                        <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                        <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                    </svg>
+                    Desarrollo de API
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network">
+                        <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                        <rect x="2" y="2" width="6" height="6" rx="1"></rect>
+                        <path d="M16 2v2c0 1.1.9 2 2 2h2"></path>
+                        <path d="M22 16h-2c-1.1 0-2 .9-2 2v2"></path>
+                        <path d="M6 8v8c0 1.1.9 2 2 2h8"></path>
+                    </svg>
+                    Conmutación y Enrutamiento de Redes
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M18 17V9a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v8"></path>
+                        <path d="M10 13l2 2 4-4"></path>
+                    </svg>
+                    Ciencia de datos y Big Data
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a1 1 0 0 0-1.4 0L6.3 14.7a1 1 0 0 0 0-1.4l.6-.6a1 1 0 0 1 1.4 0l3.77-3.77a6 6 0 0 1 7.94-7.94l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0Z"></path>
+                        <path d="m21.2 10.6-3.77 3.77a6 6 0 0 1-7.94 7.94l-3.77-3.77a1 1 0 0 0-1.4 0L3.3 17.7a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1 7.94-7.94l3.77 3.77a1 1 0 0 0 0-1.4l-.6-.6a1 1 0 0 1 0-1.4Z"></path>
+                    </svg>
+                    Técnico en reparación de laptops
+                </li>
+                <li class="skill-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    Programación en Bash
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Proyectos</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Proyecto 1: Aplicación Web de Gestión de Usuarios.</h3>
+                    <p class="text-gray-600 text-sm">Desarrollé una aplicación web que permite a los usuarios
+                        registrarse e iniciar sesión utilizando un sistema de autenticación robusto. Utilizando
+                        Flask como framework principal y Python como lenguaje de programación, implementé una
+                        base de datos en la nube con MongoDB para almacenar la información de los usuarios de
+                        manera segura y accesible.
+
+                        La aplicación incluye un sistema de recuperación de contraseña que utiliza SendGrid, lo
+                        que permite a los usuarios restablecer sus contraseñas fácilmente a través de un enlace enviado
+                        a su correo electrónico. Además, implementé la opción de iniciar sesión mediante Google, lo que
+                        simplifica el proceso de autenticación al permitir a los usuarios acceder con sus credenciales
+                        existentes.
+
+                        Al registrarse o iniciar sesión con Google, se crea automáticamente un perfil para el usuario,
+                        capturando su nombre y proporcionando una experiencia personalizada desde el primer momento. Este
+                        enfoque no solo mejora la seguridad, sino que también facilita una interacción más fluida y
+                        amigable con la aplicación.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Proyecto 2: Página Web Educativa sobre Ecología.</h3>
+                    <p class="text-gray-600 text-sm">Desarrollé una página web durante mi etapa en la preparatoria, diseñada
+                        para brindar información valiosa sobre la asignatura de Ecología. La plataforma cuenta con un menú de
+                        navegación intuitivo que permite a los usuarios acceder fácilmente a diferentes secciones, incluyendo
+                        información relevante sobre la preparatoria y un apartado dedicado a dejar comentarios, fomentando así
+                        la interacción y el feedback de los visitantes.
+
+                        Además, integré un juego en C++ que funciona como un ahorcado básico, proporcionando una manera
+                        divertida y educativa de aprender sobre conceptos ecológicos. La página está diseñada con un enfoque
+                        profesional, asegurando que la presentación sea atractiva y accesible para todos los usuarios interesados
+                        en el tema.
+
+                        Este proyecto no solo refleja mis habilidades técnicas en desarrollo web y programación, sino también mi
+                        compromiso por promover el aprendizaje de la Ecología de una manera interactiva y atractiva.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Proyecto 3: Interfaz Gráfica Web para Escaneo de Puertos Nmap.</h3>
+                    <p class="text-gray-600 text-sm">Desarrollé una interfaz gráfica web para la herramienta de escaneo de puertos Nmap,
+                        integrando un panel administrativo para la gestión de las operaciones. Esta aplicación permite a los usuarios
+                        realizar escaneos de red de manera intuitiva a través de una interfaz amigable. Además, incorporé una terminal
+                        interactiva basada en `bspwm` de Linux, ofreciendo a los usuarios avanzados la flexibilidad de ejecutar comandos
+                        directamente desde el navegador. Este proyecto combina la facilidad de uso de una interfaz gráfica con la potencia
+                        de herramientas de línea de comandos, facilitando las tareas de seguridad y administración de red.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold text-black mb-4 border-b border-black pb-2">Capacitación y Certificaciones</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Certificado: Curso de Desarrollo Web Full Stack</h3>
+                    <p class="text-gray-600 text-sm">Plataforma de Aprendizaje XYZ - Año 2023</p>
+                    <p class="text-200 text-sm"><a href="#" class="text-blue-300 hover:underline">Ver Certificado</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Constancia: Taller de Ciberseguridad Básica</h3>
+                    <p class="text-gray-600 text-sm">Organización de Seguridad ABC - Año 2022</p>
+                    <p class="text-gray-200 text-sm"><a href="#" class="text-blue-300 hover:underline">Ver Constancia</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Constancia: Técnico en Reparación de Laptops</h3>
+                    <p class="text-gray-600 text-sm">Fundación Carlos Slim - 25 de junio del 2023</p>
+                    <p class="text-gray-200 text-sm"><a href="Constancias/laps.pdf" class="text-blue-300 hover:underline">Ver Constancia</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Constancia: Introducción a la Programación con Python</h3>
+                    <p class="text-gray-600 text-sm">Santander Open Academy - 15 de mayo del 2025</p>
+                    <p class="text-gray-200 text-sm"><a href="Constancias/Python.pdf" class="text-blue-300 hover:underline">Ver Constancia</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Constancia: Internet de las Cosas (IoT)</h3>
+                    <p class="text-gray-600 text-sm">Santander Open Academy - 15 de mayo del 2025</p>
+                    <p class="text-gray-200 text-sm"><a href="Constancias/IoT.pdf" class="text-blue-300 hover:underline">Ver Constancia</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-black">Constancia: Introducción a la Ciencia de Datos</h3>
+                    <p class="text-gray-600 text-sm">Santander Open Academy - 15 de mayo del 2025</p>
+                    <p class="text-gray-200 text-sm"><a href="Constancias/Ciencias.pdf" class="text-blue-300 hover:underline">Ver Constancia</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        // This JavaScript script adds interactivity, but the base HTML/CSS is the CV.
+        // Python is not needed for browser interactivity.
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1 = document.querySelector('h1');
+            h1.addEventListener('mouseover', () => {
+                h1.classList.toggle('text-purple-300');
+            });
+        });
+    </script>
+</body>
+</html>
